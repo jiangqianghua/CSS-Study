@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>水平居中布局的第二种解决方案</title>
+	<!-- 只设置子元素 diaplay 为 block 或者 table， 以及margin设置0 auto特点 -->
+	<style type="text/css">
+		#parent {
+			width: 100%;
+			height: 400px;
+			background: #ccc;
+		}
+		#child {
+			width: 200px;
+			height: 200px;
+			background: #c9394a;
+			/**
+			设置block 和 table ， 不能设置inline
+			优点： 只需要对子元素设置
+			缺点： 如果子元素脱离文档流，会导致margin属性值无效
+				* 脱离文档 设置方法 
+					*float: left 或者 right;
+					*设置决定定位
+					*设置固定定位
+			**/
+			display: block;
+			/**
+			margin属性： 外边距
+			* 一个值 上右下左
+			* 两个值 第一个表示上下， 第二个表示左右
+			* 三个值 第一个表示上， 第二个表示左右， 第三个表示下
+			* 四个值 分别表示 上右下左
+			**/
+			margin: 0 auto;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="child">居中布局</div>
+	</div>
+</body>
+</html>

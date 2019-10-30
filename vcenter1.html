@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>垂直居中布局的第一种解决方案</title>
+	<!-- 整合了父元素text-align 和 子元素 inline-block特点 
+		优点： 浏览器兼容性好
+		缺点：vertical-align 父布局下的其他元素也居中
+	-->
+	<style type="text/css">
+		#parent {
+			width: 200px;
+			height: 600px;
+			background: #ccc;
+			/**
+			display属性
+			*table：设置当前元素为 table 元素
+			*table-cell: 设置当前元素为<td> 单元格。 单元格可以设置垂直和水平居中;
+			**/
+			display: table-cell;
+			/**
+			** vertical-align 属性： 用户设置文本内容垂直居中
+			**/
+			vertical-align: middle;
+		}
+		#child {
+			width: 200px;
+			height: 200px;
+			background: #c9394a;
+		}
+	</style>
+</head>
+<body>
+	<div id="parent">
+		其他元素
+		<div id="child">居中布局</div>
+	</div>
+</body>
+</html>

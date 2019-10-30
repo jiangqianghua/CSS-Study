@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>水平居中布局的第三种解决方案</title>
+	<!-- 使用left 和 transform -->
+	<style type="text/css">
+		#parent {
+			width: 60%;
+			height: 400px;
+			background: #ccc;
+			left: 100px;
+			position: fixed; /** 只要不设置static都可以 */
+		}
+		#child {
+			width: 200px;
+			height: 200px;
+			background: #c9394a;
+			/**
+			当把当前元素设置为决定定位后
+			* 如果父元素没有开启定位，当前元素相对于页面定位
+			* 如果父元素开启了定位，只要不是static，都是开启了定位，当前元素是相对于父元素定位
+			优点： 父元素是否脱离文档流，不影响子级元素水平居中的效果
+			缺点： transform属于css中新增的属性，浏览器支持情况不好
+			**/
+			position: absolute;
+			/* left设置50%只是让元素左边框居中，如果要设置元素居中，需要设置transform往左平移宽度的一半 */
+			left: 50%;
+			transform: translateX(-50%);
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="child">居中布局</div>
+	</div>
+</body>
+</html>
