@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>居中布局的第一种解决方案</title>
+	<style type="text/css">
+		#parent {
+			width: 800px;
+			height: 600px;
+			background: #ccc;
+			position: relative;
+		}
+		#child {
+			width: 200px;
+			height: 200px;
+			background: #c9394a;
+			/**
+			请参考hcenter3.html 水平居中
+			**/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="child">居中布局</div>
+	</div>
+</body>
+</html>

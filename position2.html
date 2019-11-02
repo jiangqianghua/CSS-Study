@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>postion定位 absolute</title>
+	<!-- 
+		绝对定位
+	-->
+	<style type="text/css">
+
+		* {
+			margin: 0px;
+		}
+		.parent{
+			width: 600px;
+			height: 500px;
+			background: blue;
+			margin: 0 auto;
+			position: relative; /** 父元素一定要设置定位属性，否则子元素会相对于浏览器**/
+		}
+		.test{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			right: 50px;
+			bottom: 50px;
+		}
+		.bor{
+			width: 100px;
+			height: 100px;
+			background: grey;
+			right: 50px;
+			bottom: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="bor"></div>
+		<div class="test"></div>
+	</div>
+
+</body>
+</html>
