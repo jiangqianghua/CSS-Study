@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transition简单实用</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: #000;
+		}
+
+		.demo-1{
+			/* 参数意义 
+			第一个参数 动画属性名称 width 表示动画宽度改变，对应demo-1:hover的width
+			第二个参数 动画持续时间 2秒
+			第三个参数 动画执行方式，linear线性
+			第四个参数 动画延迟多久执行
+			*/
+			transition: width 2s linear 0s;
+		}
+		.demo-1:hover{
+			width: 500px
+		}
+
+		.demo-2{
+			/* 参数意义 
+			第一个参数 动画属性名称 width 表示动画宽度改变，对应demo-1:hover的width
+			第二个参数 动画持续时间 2秒
+			第三个参数 动画执行方式，linear线性
+			第四个参数 动画延迟多久执行
+			*/
+			transition: transform 2s linear 0s;
+		}
+		.demo-2:hover{
+			transform: rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box demo-1">
+		
+	</div>
+	<div class="box demo-2">
+		
+	</div>
+</body>
+</html>

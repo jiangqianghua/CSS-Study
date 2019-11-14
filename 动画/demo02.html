@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+	<style type="text/css">
+		.demo-1{
+
+		}
+
+		.demo-1 .cell {
+			width: 200px;
+			height: 200px;
+			background: red;
+			/*表示加载就执行动画*/
+			/*animation: move 2s linear infinite;*/
+		}
+
+		.demo-1:hover .cell{
+			/*animation: move 2s linear 0s;*/
+			/* 最后一个参数表示循环次数 2 表示循环2次就停止动画*/
+			/*animation: move 2s linear 2;*/
+			/*infinite 表示无限循环 */
+			animation: move 2s linear infinite;
+		}
+
+		@keyframes move {
+			100%{
+				transform: translateX(200px);
+			}
+		}
+
+		.demo-2 .cell {
+			width: 200px;
+			height: 200px;
+			background: blue;
+		}
+
+		.demo-2:hover .cell {
+			/*alternate 先正向播放，在反向播放*/
+			/*animation: move 2s linear infinite alternate;*/
+			/* reverse 反向播放*/
+			/*animation: move 2s linear infinite reverse;*/
+			/*定格在最后一帧动画上 */
+			animation: move 2s linear alternate forwards;
+		}
+	</style>
+</head>
+<body>
+	<div class="box demo-1">
+		<div class="cell"></div>
+	</div>
+	<div class="box demo-2">
+		<div class="cell"></div>
+	</div>
+</body>
+</html>
